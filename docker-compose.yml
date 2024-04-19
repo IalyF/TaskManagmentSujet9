@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  angular:
+    image: node:20.12.2
+    container_name: angular
+    working_dir: /app
+    volumes:
+      - ./angular:/app
+    ports:
+      - "4200:4200"
+    command: npm start
+
+  symfony:
+    image: php:7.4-fpm
+    container_name: symfony
+    working_dir: /app
+    volumes:
+      - ./symfony:/app
+    environment:
+      - APP_ENV=dev
+      - DATABASE_URL=mysql://user:password@mysql:3306/db_name
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=db_name
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
