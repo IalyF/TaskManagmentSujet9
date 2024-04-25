@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
-import { MatDialogContent, MatDialogTitle, MatDialogActions } from '@angular/material/dialog';
+import { MatDialogContent, MatDialogTitle, MatDialogActions, MatDialogClose } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -11,7 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatDialogContent,
     MatDialogTitle,
     MatDialogActions,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogClose
   ],
   templateUrl: './pop-up-dialog.component.html',
   styleUrl: './pop-up-dialog.component.css'

@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatDialog } from "@angular/material/dialog";
 import { PopUpDialogComponent } from "./pop-up-dialog/pop-up-dialog.component";
+import { PoUpDeletingTaskComponent } from './po-up-deleting-task/po-up-deleting-task.component';
+import { PopUpEdititngTaskComponent } from './pop-up-edititng-task/pop-up-edititng-task.component';
 
 
 @Component({
@@ -53,4 +55,15 @@ export class AppComponent {
     });
 
   }
+
+  deleteTask():void {
+
+    const dialogRef = this.dialog.open(PoUpDeletingTaskComponent, {});
+
+  }
+
+  editTask():void {
+    const dialogRef = this.dialog.open( PopUpEdititngTaskComponent,{});
+  }
+
 }
