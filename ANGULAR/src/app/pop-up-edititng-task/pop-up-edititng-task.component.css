@@ -1,0 +1,8 @@
+ul {
+    list-style-type: none;
+}
+
+mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+}

@@ -45,3 +45,22 @@ div.all_tasks mat-card mat-card-footer img{
     margin-left: -22px;
     border: 2px #999 solid;
 }
+
+mat-card-content#action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+mat-card-content#action button:nth-child(1){
+    margin-right: -30px;
+    margin-bottom: -20px;
+}
+
+mat-card-content#action button:nth-child(2){
+    margin-right: -20px;
+    margin-bottom: -20px;
+}
+
+mat-card-content#action button img{
+    width: 18px;
+}
